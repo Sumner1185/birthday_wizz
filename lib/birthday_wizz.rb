@@ -4,8 +4,14 @@ class BirthdayWizz
     @list = []
   end
 
-  def input_birthdays(name, date)
+  def input_birthday(name, date)
     @list.push({name: name, date: date})
+  end
+
+  def show_birthday
+    @list.each do |person|
+      puts "#{person[:name]}: #{person[:date]}"
+    end
   end
 
 end
